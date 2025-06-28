@@ -101,22 +101,27 @@
   </button>
 
   <script>
-    const music = document.getElementById('bg-music');
-    const button = document.getElementById('music-btn');
-    let isPlaying = false;
+  const music = document.getElementById('bg-music');
+  const button = document.getElementById('music-btn');
+  let isPlaying = false;
 
-    function toggleMusic() {
-      if (!isPlaying) {
-        music.play();
+  function toggleMusic() {
+    if (!isPlaying) {
+      music.play().then(() => {
         button.innerHTML = "⏸️ Stop Music";
         isPlaying = true;
-      } else {
-        music.pause();
-        button.innerHTML = "▶️ Play Birthday Music";
-        isPlaying = false;
-      }
+      }).catch((e) => {
+        alert("Click somewhere on the page first, then try again.");
+        console.log("Autoplay blocked:", e);
+      });
+    } else {
+      music.pause();
+      button.innerHTML = "▶️ Play Birthday Music";
+      isPlaying = false;
     }
-  </script>
+  }
+</script>
+
 
   <div class="footer">Made with 💚 & lavender vibes — from your friend 🌿</div>
 </body>
