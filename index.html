@@ -7,56 +7,91 @@
   <style>
     body {
       margin: 0;
+      padding: 40px 20px;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a18cd1, #84fab0, #8fd3f4, #ffc3a0);
-      background-size: 300% 300%;
-      animation: rainbow 15s ease infinite;
-      color: #fff;
+      background: linear-gradient(135deg, #e6e6fa, #d0f0c0);
+      background-size: cover;
       text-align: center;
-      padding: 60px 20px;
       box-sizing: border-box;
     }
 
-    @keyframes rainbow {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
     h1 {
-      font-size: 3.5em;
-      margin-bottom: 0.3em;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      font-size: 3.2em;
+      color: #5e366a; /* Deep lavender */
+      margin-bottom: 0.2em;
     }
 
     p {
       font-size: 1.3em;
-      margin-bottom: 2em;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      color: #4b6043; /* Olive greenish */
+      margin-bottom: 30px;
     }
 
-    img {
+    .main-photo img {
+      width: 250px;
       max-width: 90%;
-      width: 300px;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      margin-bottom: 30px;
+    }
+
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .photo-gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
 
     .footer {
       margin-top: 40px;
       font-size: 0.9em;
-      color: #fff8;
+      color: #666;
     }
 
     audio {
       display: none;
     }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.3em;
+      }
+
+      p {
+        font-size: 1.1em;
+      }
+
+      .photo-gallery img {
+        width: 120px;
+        height: 120px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <h1>🎂 Happy Birthday, Sarah! 🎉</h1>
-  <p>May your day be filled with rainbows, laughter, and love. You deserve all the magic. 💖</p>
-  <img src="https://media.giphy.com/media/Ju7l5y9osyymQ/giphy.gif" alt="Cute Birthday GIF" />
+  <p>Wishing you a magical day filled with love, laughter, and lavender skies. 💖</p>
+
+  <!-- 🌟 Main Picture of Birthday Person -->
+  <div class="main-photo">
+    <img src="sarah-main.jpg" alt="Sarah's Birthday Photo" />
+  </div>
+
+  <!-- 📸 Photo Gallery Section -->
+  <h2 style="color:#5a3d55; font-size: 1.8em; margin-bottom: 10px;">📸 Memories with You</h2>
+  <div class="photo-gallery">
+    <img src="nandhu.jpg" alt="Memory 1">
+  </div>
 
   <!-- 🔊 Background Music -->
   <audio autoplay loop>
@@ -64,6 +99,6 @@
     Your browser does not support the audio element.
   </audio>
 
-  <div class="footer">Handmade with love 🌈</div>
+  <div class="footer">Made with 💚 & lavender vibes — from your friend 🌿</div>
 </body>
 </html>
