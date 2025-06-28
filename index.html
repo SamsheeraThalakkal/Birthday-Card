@@ -94,10 +94,16 @@
   </div>-->
 
   <!-- 🔊 Background Music -->
-  <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+ <audio id="bg-music" autoplay loop muted>
+  <source src="https://raw.githubusercontent.com/mayankchaudhary-code/free-mp3-host/main/music/happy-birthday-pop.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- ▶️ Play button to unmute -->
+<button onclick="document.getElementById('bg-music').muted = false;" style="margin-top: 20px; font-size: 1em; padding: 8px 16px; border-radius: 8px; border: none; background-color: #5e366a; color: white; cursor: pointer;">
+  ▶️ Play Birthday Music
+</button>
+
 
   <div class="footer">Made with 💚 & lavender vibes — from your friend 🌿</div>
 </body>
